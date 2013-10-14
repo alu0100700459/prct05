@@ -3,6 +3,8 @@
 require "./gcd.rb"
 
 class Fraccion
+  attr_reader :b
+  attr_accessor :a
 
   def initialize(a = 0, b = 1)
     @a = a
@@ -15,6 +17,14 @@ class Fraccion
     end
 
     self.normalizar
+  end
+
+  def b=(b)
+    if b != 0
+      @b = b
+    else
+      prints 'ERROR: El denominador no puede ser 0.'
+    end
   end
 
   def normalizar
