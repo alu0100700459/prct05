@@ -5,7 +5,16 @@ require "./gcd.rb"
 class Fraccion
 
   def initialize(a = 0, b = 1)
+    @a = a
 
+    if b != 0
+      @b = b
+    else
+      prints 'ERROR: El denominador no puede ser 0.'
+      @b = 1
+    end
+
+    self.normalizar
   end
 
   def normalizar
