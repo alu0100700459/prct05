@@ -27,10 +27,10 @@ class Fraccion
   def b=(b)
     if b != 0
       @b = b
+      self.normalizar
     else
       prints 'ERROR: El denominador no puede ser 0.'
     end
-    self.normalizar
   end
 
   def normalizar
