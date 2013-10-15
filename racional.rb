@@ -47,14 +47,16 @@ class Fraccion
     a1 = (denom/@b)*@a
     a2 = (denom/otra.b)*otra.a
 
-    @a = a1 + a2
-    @b = denom
-
-    self.normalizar
+    Fraccion.new(a1+a2, denom)
   end
 
   def resta(otra)
+    denom = lcm(@b, otra.b)
 
+    a1 = (denom/@b)*@a
+    a2 = (denom/otra.b)*otra.a
+
+    Fraccion.new(a1-a2, denom)
   end
 
   def producto(otra)
