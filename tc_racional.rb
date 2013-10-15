@@ -24,7 +24,8 @@ class Test_Fraccion < Test::Unit::TestCase
 		# Cambiamos los signos para ver si la suma es todavía correcta
 		f1.b=-9
 		f2.a=-3
-		f3.b=-36
+		f3.a=31
+		f3.b=-18
 		assert_equal(f3.a, f1.suma(f2).a)
 		assert_equal(f3.b, f1.suma(f2).b)
 	end

@@ -34,7 +34,14 @@ class Fraccion
   end
 
   def normalizar
-    mcd = gcd(a, b)
+
+    # Si algún término es negativo, que sea el numerador
+    if @b < 0
+      @a = -@a
+      @b = -@b
+    end
+
+    mcd = gcd(@a, @b)
     if mcd != 0
       @a /= mcd
       @b /= mcd
