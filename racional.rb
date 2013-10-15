@@ -60,15 +60,15 @@ class Fraccion
   end
 
   def producto(otra)
-
+    Fraccion.new(@a*otra.a, @b*otra.b)
   end
 
   def division(otra)
-
+    Fraccion.new(@a*otra.b, @b*otra.a)
   end
 
   def to_s
-
+    "#{@a}/#{@b}"
   end
 
 end
