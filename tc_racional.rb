@@ -30,4 +30,12 @@ class Test_Fraccion < Test::Unit::TestCase
 		assert_equal(f3.b, f1.suma(f2).b)
 	end
 
+	def test_diferencia
+		f1 = Fraccion.new(2, 9)
+		f2 = Fraccion.new(6, 12) # La fracción no está simplificada
+		f3 = Fraccion.new(5, -18) # f3 = f1-f2
+		assert_equal(f3.a, f1.resta(f2).a)
+		assert_equal(f3.b, f1.resta(f2).b)
+	end
+
 end
