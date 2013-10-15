@@ -6,4 +6,3 @@ require "./gcd.rb"
 def lcm(a, b)
   ((a*b).abs)/gcd(a, b)
 end
-
