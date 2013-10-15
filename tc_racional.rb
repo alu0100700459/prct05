@@ -54,4 +54,9 @@ class Test_Fraccion < Test::Unit::TestCase
     assert_equal(f3.b, f1.division(f2).b)
   end
 
+  def test_to_a
+    assert_equal("5/6", Fraccion.new(5, 6).to_s)
+    assert_equal("1/3", Fraccion.new(2, 6).to_s)
+  end
+
 end
