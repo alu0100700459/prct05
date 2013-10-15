@@ -46,4 +46,12 @@ class Test_Fraccion < Test::Unit::TestCase
     assert_equal(f3.b, f1.producto(f2).b)
   end
 
+  def test_cociente
+    f1 = Fraccion.new(6, -7)
+    f2 = Fraccion.new(-3, 15) # La fracción no está simplificada
+    f3 = Fraccion.new(30, 7) # f3 = f1/f2
+    assert_equal(f3.a, f1.division(f2).a)
+    assert_equal(f3.b, f1.division(f2).b)
+  end
+
 end
