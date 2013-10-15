@@ -12,7 +12,7 @@ class Fraccion
     if b != 0
       @b = b
     else
-      prints 'ERROR: El denominador no puede ser 0.'
+      raise 'ERROR: El denominador no puede ser 0.'
       @b = 1
     end
 
@@ -29,7 +29,7 @@ class Fraccion
       @b = b
       self.normalizar
     else
-      prints 'ERROR: El denominador no puede ser 0.'
+      raise 'ERROR: El denominador no puede ser 0.'
     end
   end
 
